@@ -27,6 +27,7 @@ public class Teste extends Application {
     private static Scene sCatalogo;
     private static Scene sPesquisa;
     private static Scene sCesta;
+    private static Scene sCestaVazia;
     
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -35,11 +36,13 @@ public class Teste extends Application {
         Parent fxmlCatalogo = FXMLLoader.load(getClass().getResource("FXMLCatalogo.fxml"));
         Parent fxmlPesquisa = FXMLLoader.load(getClass().getResource("FXMLPesquisa.fxml"));
         Parent fxmlCesta = FXMLLoader.load(getClass().getResource("FXMLCesta.fxml"));
+        Parent fxmlCestaVazia = FXMLLoader.load(getClass().getResource("FXMLCestaVazia.fxml"));
         
         sMenu = new Scene(fxmlMenu);
         sCatalogo = new Scene(fxmlCatalogo);
         sPesquisa = new Scene(fxmlPesquisa);
         sCesta = new Scene(fxmlCesta);
+        sCestaVazia = new Scene(fxmlCestaVazia);
         
         primaryStage.setScene(sMenu);
         stage.setWidth(900);
@@ -62,6 +65,9 @@ public class Teste extends Application {
                 break;
             case "cesta":
                 stage.setScene(sCesta);
+                break;
+            case "cestaVazia":
+                stage.setScene(sCestaVazia);
                 break;
         }
     }

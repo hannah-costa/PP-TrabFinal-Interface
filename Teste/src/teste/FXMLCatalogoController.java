@@ -412,7 +412,7 @@ public class FXMLCatalogoController implements Initializable {
                     prp = new String();
                     prp = String.valueOf(auxp.getPreco());
                     precoProduto1.setText("R$ " + prp);
-                    baddCP1.setOpacity(100);;
+                    baddCP1.setOpacity(100);
 
                 }else if(i == 7){
                     auxp = (Produto)mds.get(i);
@@ -442,7 +442,7 @@ public class FXMLCatalogoController implements Initializable {
                     prp = new String();
                     prp = String.valueOf(auxp.getPreco());
                     precoProduto2.setText("R$ " + prp);             
-                    baddCP2.setOpacity(100);;
+                    baddCP2.setOpacity(100);
 
                 }else if(i == 8){
                     auxp = (Produto)mds.get(i);
@@ -472,7 +472,7 @@ public class FXMLCatalogoController implements Initializable {
                     prp = new String();
                     prp = String.valueOf(auxp.getPreco());
                     precoProduto3.setText("R$ " + prp); 
-                    baddCP3.setOpacity(100);;
+                    baddCP3.setOpacity(100);
                 }else if(i == 9){
                     auxp = (Produto)mds.get(i);
                     auxp.printProduto(auxp);
@@ -501,7 +501,7 @@ public class FXMLCatalogoController implements Initializable {
                     prp = new String();
                     prp = String.valueOf(auxp.getPreco());
                     precoProduto4.setText("R$ " + prp); 
-                    baddCP4.setOpacity(100);;
+                    baddCP4.setOpacity(100);
                 }else if(i == 10){
                     auxp = (Produto)mds.get(i);
                     auxp.printProduto(auxp);
@@ -530,7 +530,7 @@ public class FXMLCatalogoController implements Initializable {
                     prp = new String();
                     prp = String.valueOf(auxp.getPreco());
                     precoProduto5.setText("R$ " + prp); 
-                    baddCP5.setOpacity(100);;
+                    baddCP5.setOpacity(100);
                 }else if(i == 11){
                     auxp = (Produto)mds.get(i);
                     auxp.printProduto(auxp);
@@ -559,7 +559,7 @@ public class FXMLCatalogoController implements Initializable {
                     prp = new String();
                     prp = String.valueOf(auxp.getPreco());
                     precoProduto6.setText("R$ " + prp); 
-                    baddCP6.setOpacity(100);;
+                    baddCP6.setOpacity(100);
                 }
                 i++;
             } 

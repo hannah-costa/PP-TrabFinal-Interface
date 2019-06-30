@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package teste.cesta;
+package teste;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -15,6 +16,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import static teste.Teste.cesta;
 
 /**
  * FXML Controller class
@@ -22,14 +24,15 @@ import javafx.scene.image.ImageView;
  * @author Hannah
  */
 public class FXMLCestaController implements Initializable {
-
+    
+    //CestaCompras ces;
+    
     @FXML
     private ImageView ItemCesta1;
     @FXML
     private ImageView ItemCesta2;
     @FXML
     private ImageView ItemCesta3;
-    private ImageView ItemCesta4;
     @FXML
     private Label nome1;
     @FXML
@@ -61,13 +64,11 @@ public class FXMLCestaController implements Initializable {
     @FXML
     private ComboBox<?> qtd3;
     @FXML
-    private Button menu;
-    @FXML
-    private Button delivery;
-    @FXML
     private Button ant;
     @FXML
     private Button prox;
+    @FXML
+    private Label pag;
 
     
     
@@ -77,9 +78,9 @@ public class FXMLCestaController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        //if (cesta.getItens().isEmpty()){
-            
-        //}
+        if (cesta.getItens().isEmpty()){
+            Teste.trocaTela("cestaVazia");
+        }
         
         Image item1 = new Image("produto1.jpg");
         ItemCesta1.setImage(item1);
@@ -91,5 +92,29 @@ public class FXMLCestaController implements Initializable {
         ItemCesta3.setImage(item3);
         
     }    
+
+    @FXML
+    private void aoMenuC(ActionEvent event) {
+        System.out.println("You clicked me!");
+        Teste.trocaTela("menu");
+    }
+
+    @FXML
+    private void pagAnt(ActionEvent event) {
+    
+    }
+
+    @FXML
+    private void pagProx(ActionEvent event) {
+    
+    }
+    
+    
+    @FXML
+    private void realizarCompra(ActionEvent event) {
+    
+    }
+
+    
     
 }
