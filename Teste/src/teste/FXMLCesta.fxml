@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="teste.FXMLCestaController">
+   <children>
+      <Label layoutX="11.0" layoutY="91.0" prefHeight="53.0" prefWidth="301.0" text="Cesta de Compras" wrapText="true" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="588.0" AnchorPane.topAnchor="91.0">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="629.0" layoutY="118.0" text="Preço">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Line endX="751.0" layoutX="131.0" layoutY="147.0" startX="-118.0" stroke="#b5aeae" />
+      <Label layoutX="787.0" layoutY="117.0" text="Quantidade">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#175749" height="74.0" layoutY="-4.0" stroke="#143626" strokeType="INSIDE" width="901.0" />
+      <VBox layoutX="13.0" layoutY="153.0" prefHeight="487.0" prefWidth="550.0" spacing="20.0">
+         <children>
+            <HBox prefHeight="146.0" prefWidth="757.0" spacing="20.0">
+               <children>
+                  <ImageView fx:id="ItemCesta1" fitHeight="146.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Pictures/download.png" />
+                     </image>
+                  </ImageView>
+                  <VBox prefHeight="146.0" prefWidth="401.0" spacing="5.0">
+                     <children>
+                        <Label fx:id="nome1" prefHeight="20.0" prefWidth="401.0" text="Nome" textFill="#3b38e1">
+                           <font>
+                              <Font name="Arial Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="autor1" prefHeight="29.0" prefWidth="401.0" text="Autor">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="401.0" text="Editora">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="estoque1" prefHeight="29.0" prefWidth="401.0" text="Estoque" textFill="#195b25">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <ImageView fx:id="ItemCesta3" fitHeight="146.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Pictures/download.png" />
+                     </image>
+                  </ImageView>
+                  <VBox prefHeight="146.0" prefWidth="410.0" spacing="5.0">
+                     <children>
+                        <Label fx:id="nome2" prefHeight="35.0" prefWidth="421.0" text="Nome" textFill="#3b38e1">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="autor2" prefHeight="29.0" prefWidth="401.0" text="Autor">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="401.0" text="Editora">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="estoque2" prefHeight="29.0" prefWidth="401.0" text="Estoque" textFill="#195b25">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <ImageView fx:id="ItemCesta2" fitHeight="146.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Pictures/download.png" />
+                     </image>
+                  </ImageView>
+                  <VBox prefHeight="146.0" prefWidth="424.0" spacing="5.0">
+                     <children>
+                        <Label fx:id="nome3" prefHeight="35.0" prefWidth="445.0" text="Nome" textFill="#3b38e1">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="autor3" prefHeight="29.0" prefWidth="401.0" text="Autor">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="401.0" text="Editora">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="estoque3" prefHeight="29.0" prefWidth="401.0" text="Estoque" textFill="#195b25">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="583.0" layoutY="155.0" prefHeight="473.0" prefWidth="127.0" spacing="150.0">
+         <children>
+            <Label fx:id="preco1" text="R$ 00,00" textFill="#8a2c19">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="preco2" text="R$ 00,00" textFill="#8a2c19">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="preco3" text="R$ 00,00" textFill="#8a2c19">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="754.0" layoutY="154.0" prefHeight="473.0" prefWidth="127.0" spacing="150.0">
+         <children>
+            <ComboBox fx:id="qtd1" prefHeight="29.0" prefWidth="31.0" promptText="1" />
+            <ComboBox fx:id="qtd2" prefHeight="29.0" prefWidth="31.0" promptText="1" />
+            <ComboBox fx:id="qtd3" prefHeight="29.0" prefWidth="31.0" promptText="1" />
+         </children>
+      </VBox>
+      <Label layoutX="11.0" layoutY="7.0" text="tribal." textFill="#dde1dd">
+         <font>
+            <Font name="Cooper Black" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="menu" layoutX="150.0" layoutY="11.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="95.0" text="MENU" textFill="#5e5050">
+         <font>
+            <Font name="Akhbar MT" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="delivery" layoutX="773.0" layoutY="25.0" mnemonicParsing="false" text="Realizar Compra">
+         <effect>
+            <Blend mode="GREEN" />
+         </effect>
+      </Button>
+      <Button fx:id="ant" layoutX="557.0" layoutY="24.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="37.0" text="&lt;-" />
+      <Button fx:id="prox" layoutX="693.0" layoutY="23.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="37.0" text="-&gt;" />
+      <Label layoutX="619.0" layoutY="21.0" text="Página" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

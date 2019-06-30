@@ -29,7 +29,7 @@ public class FXMLMenuController implements Initializable {
     private Button bPesquisar;
     
     @FXML
-    private Button bCarrinho;
+    private Button bCesta;
     @FXML
     private Button bEntrega;
     
@@ -46,9 +46,9 @@ public class FXMLMenuController implements Initializable {
     }
     
     @FXML
-    protected void botaoCarrinho(ActionEvent event) {
+    protected void botaoCesta(ActionEvent event) {
         System.out.println("You clicked me!");
-        Teste.trocaTela("carrinho");
+        Teste.trocaTela("cesta");
     }
     
     @FXML

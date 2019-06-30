@@ -18,13 +18,15 @@ import javafx.stage.Stage;
  */
 public class Teste extends Application {
     
-    Catalogo ctlg;
+    static Catalogo ctlg;
+    static CestaCompras cesta;
     
     private static Stage stage;
     
     private static Scene sMenu;
     private static Scene sCatalogo;
     private static Scene sPesquisa;
+    private static Scene sCesta;
     
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -32,12 +34,18 @@ public class Teste extends Application {
         Parent fxmlMenu = FXMLLoader.load(getClass().getResource("FXMLMenu.fxml"));
         Parent fxmlCatalogo = FXMLLoader.load(getClass().getResource("FXMLCatalogo.fxml"));
         Parent fxmlPesquisa = FXMLLoader.load(getClass().getResource("FXMLPesquisa.fxml"));
+        Parent fxmlCesta = FXMLLoader.load(getClass().getResource("FXMLCesta.fxml"));
         
         sMenu = new Scene(fxmlMenu);
         sCatalogo = new Scene(fxmlCatalogo);
         sPesquisa = new Scene(fxmlPesquisa);
+        sCesta = new Scene(fxmlCesta);
         
         primaryStage.setScene(sMenu);
+        stage.setWidth(900);
+        stage.setHeight(650);
+        stage.setResizable(false);
+        stage.setTitle("Tribal HQs");
         primaryStage.show();      
     }
     
@@ -52,11 +60,15 @@ public class Teste extends Application {
             case "pesquisa":
                 stage.setScene(sPesquisa);
                 break;
+            case "cesta":
+                stage.setScene(sCesta);
+                break;
         }
     }
     
     // RECEBE O ID DO PRODUTO
     public static void addCarrinho(int id){
+        cesta.add(new ItemCesta(ctlg.ctlg.get(id), 1), ctlg.ctlg.get(id));
         System.out.println("Adicionado: " +id);
     }
 
