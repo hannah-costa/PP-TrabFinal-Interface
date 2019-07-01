@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import static teste.Teste.cesta;
 
 /**
  *
@@ -48,7 +49,11 @@ public class FXMLMenuController implements Initializable {
     @FXML
     protected void botaoCesta(ActionEvent event) {
         System.out.println("You clicked me!");
-        Teste.trocaTela("cesta");
+        if (cesta.getItens().isEmpty()){
+            Teste.trocaTela("cestaVazia");
+        }else{
+            Teste.trocaTela("cesta"); 
+        }
     }
     
     @FXML

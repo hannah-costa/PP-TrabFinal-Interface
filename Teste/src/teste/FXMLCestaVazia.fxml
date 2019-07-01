@@ -19,7 +19,7 @@
             <Font name="Cooper Black" size="36.0" />
          </font>
       </Label>
-      <Button layoutX="148.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarParaMenu" prefHeight="15.0" prefWidth="95.0" text="MENU" textFill="#5e5050">
+      <Button layoutX="148.0" layoutY="14.0" mnemonicParsing="false" onAction="#aoMenuCV" prefHeight="15.0" prefWidth="95.0" text="MENU" textFill="#5e5050">
          <font>
             <Font name="Akhbar MT" size="15.0" />
          </font>

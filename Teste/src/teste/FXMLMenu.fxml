@@ -13,7 +13,7 @@
          <font>
             <Font size="85.0" />
          </font></Label>
-      <Button fx:id="bCarrinho" layoutX="175.0" layoutY="267.0" onAction="#botaoCarrinho" prefHeight="54.0" prefWidth="250.0" text="Carrinho" />
+      <Button fx:id="bCesta" layoutX="175.0" layoutY="267.0" onAction="#botaoCesta" prefHeight="54.0" prefWidth="250.0" text="Cesta de Compras" />
       <Button fx:id="bEntrega" layoutX="175.0" layoutY="332.0" onAction="#botaoEntrega" prefHeight="54.0" prefWidth="250.0" text="Entrega" />
     </children>
 </AnchorPane>

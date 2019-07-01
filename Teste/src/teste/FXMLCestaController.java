@@ -25,7 +25,7 @@ import static teste.Teste.cesta;
  */
 public class FXMLCestaController implements Initializable {
     
-    //CestaCompras ces;
+    CestaCompras ces;
     
     @FXML
     private ImageView ItemCesta1;
@@ -78,9 +78,7 @@ public class FXMLCestaController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        if (cesta.getItens().isEmpty()){
-            Teste.trocaTela("cestaVazia");
-        }
+        
         
         Image item1 = new Image("produto1.jpg");
         ItemCesta1.setImage(item1);
@@ -94,18 +92,18 @@ public class FXMLCestaController implements Initializable {
     }    
 
     @FXML
-    private void aoMenuC(ActionEvent event) {
+    protected void aoMenuC(ActionEvent event) {
         System.out.println("You clicked me!");
         Teste.trocaTela("menu");
     }
 
     @FXML
-    private void pagAnt(ActionEvent event) {
+    protected void pagAnt(ActionEvent event) {
     
     }
 
     @FXML
-    private void pagProx(ActionEvent event) {
+    protected void pagProx(ActionEvent event) {
     
     }
     

@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 public class Teste extends Application {
     
     static Catalogo ctlg;
-    static CestaCompras cesta;
+    static CestaCompras cesta = new CestaCompras();
     
     private static Stage stage;
     
