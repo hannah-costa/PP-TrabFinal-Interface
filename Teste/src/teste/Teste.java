@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import static javafx.application.Application.launch;
 
 /**
  *
@@ -18,8 +19,11 @@ import javafx.stage.Stage;
  */
 public class Teste extends Application {
     
-    static Catalogo ctlg;
-    static CestaCompras cesta = new CestaCompras();
+    static double valorTotalComprado; // NHR Q CLICA EM "REALIZAR COMPRA" DENTRO DO CARRINHO ELE IRA RECEBER O VALOR TOTAL DA COMPRA
+     /////////////////////
+    private static boolean log = false;
+    private static String nome="null",senha="null";
+    /////////////////////
     
     private static Stage stage;
     
@@ -28,6 +32,10 @@ public class Teste extends Application {
     private static Scene sPesquisa;
     private static Scene sCesta;
     private static Scene sCestaVazia;
+    private static Scene sCadastro;
+    private static Scene sLogin;
+    private static Scene sDelivery;
+  
     
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -37,12 +45,18 @@ public class Teste extends Application {
         Parent fxmlPesquisa = FXMLLoader.load(getClass().getResource("FXMLPesquisa.fxml"));
         Parent fxmlCesta = FXMLLoader.load(getClass().getResource("FXMLCesta.fxml"));
         Parent fxmlCestaVazia = FXMLLoader.load(getClass().getResource("FXMLCestaVazia.fxml"));
+        Parent Cadastro = FXMLLoader.load(getClass().getResource("Cadastro.fxml"));
+        Parent Login = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        Parent Delivery = FXMLLoader.load(getClass().getResource("Delivery.fxml"));
         
         sMenu = new Scene(fxmlMenu);
         sCatalogo = new Scene(fxmlCatalogo);
         sPesquisa = new Scene(fxmlPesquisa);
         sCesta = new Scene(fxmlCesta);
         sCestaVazia = new Scene(fxmlCestaVazia);
+        sCadastro = new Scene(Cadastro);
+        sLogin = new Scene(Login);
+        sDelivery = new Scene(Delivery);
         
         primaryStage.setScene(sMenu);
         stage.setWidth(900);
@@ -69,14 +83,66 @@ public class Teste extends Application {
             case "cestaVazia":
                 stage.setScene(sCestaVazia);
                 break;
+             case "cadastro":
+                stage.setScene(sCadastro);
+                break;
+            case "login":
+                stage.setScene(sLogin);
+                break;
+            case "delivery":
+                stage.setScene(sDelivery);
+                break;
+                
         }
     }
     
     // RECEBE O ID DO PRODUTO
     public static void addCarrinho(int id){
-        cesta.add(new ItemCesta(ctlg.ctlg.get(id), 1), ctlg.ctlg.get(id));
-        System.out.println("Adicionado: " +id);
+        int bota = 0; // bota = 0 significa q ele nao esta dentro da cesta, caso contrario bota = 1
+        id--;
+        ItemCesta ic = new ItemCesta(FXMLCatalogoController.mds.get(id));
+        for(int i=0; i<FXMLCestaController.cesta.size();i++){
+            if(FXMLCestaController.cesta.get(i).getId() == ic.getId()){
+                bota = 1;
+            }
+        }
+        if(bota == 0){
+            FXMLCestaController.cesta.add(ic);
+            System.out.println("Adicionado: " +id);
+        }
+        
+        System.out.println("TAMANHO DESSA POHA: " + FXMLCestaController.cesta.size());
     }
+    
+     ///////////////////////
+    public static boolean getLog(){
+        return log;
+    }
+    
+    public static void setLog(boolean x){
+        log=x;
+    }
+    //////atual user//////////////
+    public static void setNome(String s){
+        nome=s;
+    }
+    public static String getNome(){
+        return nome;
+    }
+    
+    public static void setSenha(String s){
+        senha=s;
+    }
+    
+    public static String getSenha(){
+        return senha;
+    }
+    
+    public static void youIn(String nome,String senha){
+        setNome(nome);
+        setSenha(senha);
+    }
+    //////////////////////////////
 
     public static void main(String[] args){
         launch(args);  

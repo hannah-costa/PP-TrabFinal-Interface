@@ -5,7 +5,7 @@ public class CestaCompras {
     private ArrayList<ItemCesta> itens;
 
     public CestaCompras() {
-        itens = new ArrayList();
+        itens = new ArrayList<>();
     }
     
     //MÉTODO GETTER
@@ -14,16 +14,16 @@ public class CestaCompras {
         return itens;
     }
     
+    protected ItemCesta get(int i){
+        return itens.get(i); 
+    }
     
-    protected boolean add(ItemCesta item, Produto produto){
-        //Esse método recebe o ItemCesta a ser adicionado e o Produto referente a ele
-        //para verificar se é possível colocar a quantidade pedida (comparar com estoque) dentro do carrinho.
+    protected void add(ItemCesta item){
+        itens.add(item);
+    }
     
-        if (item.getQtdPedida() <= produto.getQuant()){
-            itens.add(item);
-            return true;
-        }
-        return false;
+    protected int size(){
+        return itens.size();
     }
     
     protected void remover(ItemCesta item){

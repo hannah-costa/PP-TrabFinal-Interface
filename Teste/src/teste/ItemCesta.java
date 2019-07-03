@@ -1,5 +1,7 @@
 package teste;
 
+import javafx.scene.image.Image;
+
 public class ItemCesta {
     private int id;
     private String nome[];
@@ -8,8 +10,9 @@ public class ItemCesta {
     private String editora;
     private int qtdPedida;
     private double preco;
+    private Image imagem;
 
-    public ItemCesta(Produto produto, int qtdPedida) {
+    public ItemCesta(Produto produto) {
         //toda vez que um produto novo for adicionado à cesta, ele precisa antes ser transformado em ItemCesta
         //(chamar construtor).
         this.id = produto.getId();
@@ -17,14 +20,19 @@ public class ItemCesta {
         this.autor = produto.getAutor();
         this.genero = produto.getGenero();
         this.editora = produto.getEditora();
-        this.qtdPedida = qtdPedida;
+        this.qtdPedida = 1;
         this.preco = produto.getPreco();
+        this.imagem = produto.getImage();
     }
     
     //MÉTODOS GETTER
 
     protected int getId() {
         return id;
+    }
+    
+    protected Image getImagem() {
+        return imagem;
     }
 
     protected String[] getNome() {

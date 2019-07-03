@@ -13,13 +13,13 @@
             <Font name="Arial Rounded MT Bold" size="24.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#175749" height="74.0" layoutX="-2.0" layoutY="-1.0" stroke="#143626" strokeType="INSIDE" width="908.0" />
-      <Label layoutX="9.0" layoutY="10.0" text="tribal." textFill="#dde1dd">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#175749" height="74.0" layoutX="-5.0" stroke="#143626" strokeType="INSIDE" width="908.0" />
+      <Label layoutX="16.0" layoutY="3.0" text="tribal." textFill="#dde1dd">
          <font>
-            <Font name="Cooper Black" size="36.0" />
+            <Font name="AR BONNIE" size="56.0" />
          </font>
       </Label>
-      <Button layoutX="148.0" layoutY="14.0" mnemonicParsing="false" onAction="#aoMenuCV" prefHeight="15.0" prefWidth="95.0" text="MENU" textFill="#5e5050">
+      <Button layoutX="148.0" layoutY="14.0" mnemonicParsing="false" onAction="#aoMenuCV" prefHeight="15.0" prefWidth="95.0" style="-fx-background-radius: 100;" text="MENU" textFill="#5e5050">
          <font>
             <Font name="Akhbar MT" size="15.0" />
          </font>

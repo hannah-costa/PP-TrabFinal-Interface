@@ -12,7 +12,7 @@ public class Catalogo {
     public Catalogo() throws FileNotFoundException{
         ctlg = new ArrayList<Produto>();
         try {
-            Produto p; 
+            Produto p;
             String n[] = new String[20], aux[] = null, e = null;
             String a[] = new String[2];
             String g[] = new String[2];
@@ -324,7 +324,7 @@ public class Catalogo {
         }
     }   
     
-    protected Produto get(int i){
+    protected Produto get(int i){ 
         Produto aux = ctlg.get(i);      
         return aux;
     }

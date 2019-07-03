@@ -21,7 +21,7 @@ import javafx.scene.image.ImageView;
  */
 public class FXMLCatalogoController implements Initializable {
     
-    Catalogo mds;
+    static Catalogo mds;
     int pgn = 1;
 
     @FXML
@@ -182,7 +182,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto1.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto1.setText("R$ " + prp);
                     baddCP1.setOpacity(100);;
 
@@ -212,7 +212,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto2.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto2.setText("R$ " + prp);             
                     baddCP2.setOpacity(100);;
 
@@ -242,7 +242,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto3.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto3.setText("R$ " + prp); 
                     baddCP3.setOpacity(100);;
                 }else if(i == 3){
@@ -271,7 +271,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto4.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto4.setText("R$ " + prp); 
                     baddCP4.setOpacity(100);;
                 }else if(i == 4){
@@ -300,7 +300,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto5.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto5.setText("R$ " + prp); 
                     baddCP5.setOpacity(100);;
                 }else if(i == 5){
@@ -329,7 +329,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto6.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto6.setText("R$ " + prp); 
                     baddCP6.setOpacity(100);;
                 }
@@ -410,7 +410,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto1.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto1.setText("R$ " + prp);
                     baddCP1.setOpacity(100);
 
@@ -440,7 +440,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto2.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto2.setText("R$ " + prp);             
                     baddCP2.setOpacity(100);
 
@@ -470,7 +470,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto3.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto3.setText("R$ " + prp); 
                     baddCP3.setOpacity(100);
                 }else if(i == 9){
@@ -499,7 +499,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto4.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto4.setText("R$ " + prp); 
                     baddCP4.setOpacity(100);
                 }else if(i == 10){
@@ -528,7 +528,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto5.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto5.setText("R$ " + prp); 
                     baddCP5.setOpacity(100);
                 }else if(i == 11){
@@ -557,7 +557,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto6.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto6.setText("R$ " + prp); 
                     baddCP6.setOpacity(100);
                 }
@@ -638,7 +638,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto1.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto1.setText("R$ " + prp);
                     baddCP1.setOpacity(100);;
 
@@ -668,7 +668,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto2.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto2.setText("R$ " + prp);             
                     baddCP2.setOpacity(100);;
 
@@ -698,7 +698,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto3.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto3.setText("R$ " + prp); 
                     baddCP3.setOpacity(100);;
                 }else if(i == 15){
@@ -727,7 +727,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto4.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto4.setText("R$ " + prp); 
                     baddCP4.setOpacity(100);;
                 }else if(i == 16){
@@ -756,7 +756,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto5.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto5.setText("R$ " + prp); 
                     baddCP5.setOpacity(100);;
                 }else if(i == 17){
@@ -785,7 +785,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto6.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto6.setText("R$ " + prp); 
                     baddCP6.setOpacity(100);;
                 }
@@ -866,7 +866,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto1.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto1.setText("R$ " + prp);
                     baddCP1.setOpacity(100);;
 
@@ -896,7 +896,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto2.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto2.setText("R$ " + prp);             
                     baddCP2.setOpacity(100);;
 
@@ -926,7 +926,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto3.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto3.setText("R$ " + prp); 
                     baddCP3.setOpacity(100);;
                 }else if(i == 21){
@@ -955,7 +955,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto4.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto4.setText("R$ " + prp); 
                     baddCP4.setOpacity(100);;
                 }else if(i == 22){
@@ -984,7 +984,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto5.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto5.setText("R$ " + prp); 
                     baddCP5.setOpacity(100);
                 }else if(i == 23){
@@ -1013,7 +1013,7 @@ public class FXMLCatalogoController implements Initializable {
                     editoraProduto6.setText(auxp.getEditora());
 
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
+                    prp = String.format("%.2f", auxp.getPreco());
                     precoProduto6.setText("R$ " + prp); 
                     baddCP6.setOpacity(100);;
                 }
@@ -1170,7 +1170,7 @@ public class FXMLCatalogoController implements Initializable {
         
         editoraProduto1.setText(p1.getEditora());
         
-        String pr1 = String.valueOf(p1.getPreco());
+        String pr1 = String.format("%.2f", p1.getPreco());
         precoProduto1.setText("R$ " +pr1);
         
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1198,7 +1198,7 @@ public class FXMLCatalogoController implements Initializable {
         
         editoraProduto2.setText(p2.getEditora());
         
-        String pr2 = String.valueOf(p2.getPreco());
+        String pr2 = String.format("%.2f", p2.getPreco());
         precoProduto2.setText("R$ " +pr2);
         
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1226,7 +1226,7 @@ public class FXMLCatalogoController implements Initializable {
         
         editoraProduto3.setText(p3.getEditora());
         
-        String pr3 = String.valueOf(p3.getPreco());
+        String pr3 = String.format("%.2f", p3.getPreco());
         precoProduto3.setText("R$ " +pr3);
         
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1254,7 +1254,7 @@ public class FXMLCatalogoController implements Initializable {
         
         editoraProduto4.setText(p4.getEditora());
         
-        String pr4 = String.valueOf(p4.getPreco());
+        String pr4 = String.format("%.2f", p4.getPreco());
         precoProduto4.setText("R$ " +pr4);
         
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1282,7 +1282,7 @@ public class FXMLCatalogoController implements Initializable {
         
         editoraProduto5.setText(p5.getEditora());
         
-        String pr5 = String.valueOf(p5.getPreco());
+        String pr5 = String.format("%.2f", p5.getPreco());
         precoProduto5.setText("R$ " +pr5);
         
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1310,7 +1310,7 @@ public class FXMLCatalogoController implements Initializable {
         
         editoraProduto6.setText(p6.getEditora());
         
-        String pr6 = String.valueOf(p6.getPreco());
+        String pr6 = String.format("%.2f", p6.getPreco());
         precoProduto6.setText("R$ " +pr6); 
         
     } 
