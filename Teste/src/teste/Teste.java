@@ -59,8 +59,8 @@ public class Teste extends Application {
         sDelivery = new Scene(Delivery);
         
         primaryStage.setScene(sMenu);
-        stage.setWidth(900);
-        stage.setHeight(650);
+        stage.setWidth(950);
+        stage.setHeight(700);
         stage.setResizable(false);
         stage.setTitle("Tribal HQs");
         primaryStage.show();      

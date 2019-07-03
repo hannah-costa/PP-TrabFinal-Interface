@@ -133,6 +133,7 @@ public class FXMLCestaController implements Initializable {
         Teste.valorTotalComprado = cesta.calcTotal();
         cesta = new CestaCompras();
         mostraItens(event);
+        Teste.trocaTela("delivery");
     }
     
     protected void valorTotalDaCompra(){

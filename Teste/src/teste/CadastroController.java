@@ -16,6 +16,7 @@ import javafx.scene.control.TextField;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javafx.scene.control.PasswordField;
 
 
 
@@ -40,7 +41,7 @@ public class CadastroController implements Initializable {
     @FXML
     private Label msg;
     @FXML
-    private TextField senhaFild;
+    private PasswordField senhaFild;
     @FXML
     private Button finish;
     
@@ -61,12 +62,21 @@ public class CadastroController implements Initializable {
             bairro=bairroFild.getText();
             cidade=cidadeFild.getText();
             estado=estadoFild.getText();
-            gravarArq.println(nome+";"+senha+";"+rua+";"+casa+";"+bairro+";"+cidade+";"+estado);
-            gravarArq.close();
-
-            msg.setText("cadastro comcluido");
-            System.out.println("cadastrado.");
-            ja=1;
+            System.out.println(nome);
+            if( !"".equals(nomeFild.getText()) && !"".equals(senhaFild.getText()) && 
+                !"".equals(ruaFild.getText()) && !"".equals(casaFild.getText()) && 
+                !"".equals(bairroFild.getText()) && !"".equals(cidadeFild.getText()) && 
+                !"".equals(estadoFild.getText()) ){
+                
+                    gravarArq.println(nome+";"+senha+";"+rua+";"+casa+";"+bairro+";"+cidade+";"+estado);
+                    gravarArq.close();
+                    msg.setText("Cadastro concluído com sucesso.");
+                    System.out.println("cadastrado.");
+                    ja=1;
+            }else{
+                msg.setText("por favor preencha todos os campos");
+                System.out.println("falta coisa");
+            }
         }else{
             msg.setText("Já cadastrado");
             System.out.println("Ja cadastrado");
@@ -84,6 +94,7 @@ public class CadastroController implements Initializable {
         cidadeFild.setText("");
         estadoFild.setText("");
         msg.setText("");
+        ja=0;
     }
     
     @Override

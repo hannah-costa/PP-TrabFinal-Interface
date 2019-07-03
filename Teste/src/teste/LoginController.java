@@ -49,6 +49,7 @@ public class LoginController implements Initializable {
          nameFild.setText("");
          senhaFild.setText("");
          msg.setText("");
+         ja=0;
     }
 
     @FXML

@@ -9,27 +9,27 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teste.FXMLCatalogoController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teste.FXMLCatalogoController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#175749" height="74.0" layoutY="-4.0" stroke="#143626" strokeType="INSIDE" width="901.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#175749" height="74.0" layoutY="-4.0" stroke="#143626" strokeType="INSIDE" width="950.0" />
       <Label layoutX="17.0" layoutY="-2.0" text="tribal." textFill="#dde1dd">
          <font>
             <Font name="AR BONNIE" size="56.0" />
          </font>
       </Label>
-      <Button layoutX="150.0" layoutY="11.0" mnemonicParsing="false" onAction="#voltarParaMenu" prefHeight="15.0" prefWidth="95.0" text="MENU" textFill="#5e5050">
+      <Button layoutX="150.0" layoutY="11.0" mnemonicParsing="false" onAction="#voltarParaMenu" prefHeight="15.0" prefWidth="95.0" style="-fx-background-radius: 100;" text="Menu" textFill="#5e5050">
          <font>
             <Font name="Akhbar MT" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="ant" layoutX="557.0" layoutY="24.0" mnemonicParsing="false" onAction="#voltarPagina" prefHeight="26.0" prefWidth="37.0" text="&lt;-" />
-      <Button fx:id="prox" layoutX="690.0" layoutY="24.0" mnemonicParsing="false" onAction="#avancarPagina" prefHeight="26.0" prefWidth="37.0" text="-&gt;" />
-      <Label fx:id="pag" layoutX="615.0" layoutY="23.0" text="Página" textFill="WHITE">
+      <Button fx:id="ant" layoutX="594.0" layoutY="20.0" mnemonicParsing="false" onAction="#voltarPagina" prefHeight="26.0" prefWidth="37.0" text="&lt;-" />
+      <Button fx:id="prox" layoutX="727.0" layoutY="20.0" mnemonicParsing="false" onAction="#avancarPagina" prefHeight="26.0" prefWidth="37.0" text="-&gt;" />
+      <Label fx:id="pag" layoutX="652.0" layoutY="19.0" text="Página" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <VBox alignment="CENTER" layoutX="3.0" layoutY="73.0" prefHeight="571.0" prefWidth="403.0" spacing="15.0">
+      <VBox alignment="CENTER" layoutX="29.0" layoutY="81.0" prefHeight="571.0" prefWidth="403.0" spacing="15.0">
          <children>
             <HBox prefHeight="177.0" prefWidth="413.0" spacing="10.0">
                <children>
@@ -96,7 +96,7 @@
             </HBox>
          </children>
       </VBox>
-      <VBox alignment="CENTER" layoutX="453.0" layoutY="72.0" prefHeight="571.0" prefWidth="403.0" spacing="15.0">
+      <VBox alignment="CENTER" layoutX="487.0" layoutY="80.0" prefHeight="571.0" prefWidth="403.0" spacing="15.0">
          <children>
             <HBox prefHeight="214.0" prefWidth="440.0" spacing="10.0">
                <children>
@@ -163,11 +163,11 @@
             </HBox>
          </children>
       </VBox>
-      <Button fx:id="baddCP1" layoutX="351.0" layoutY="168.0" mnemonicParsing="false" onAction="#addCarrinhoP1" prefHeight="29.0" prefWidth="91.0" text="Add Carrinho" />
-      <Button fx:id="baddCP2" layoutX="344.0" layoutY="363.0" mnemonicParsing="false" onAction="#addCarrinhoP2" prefHeight="29.0" prefWidth="91.0" text="Add Carrinho" />
-      <Button fx:id="baddCP3" layoutX="345.0" layoutY="563.0" mnemonicParsing="false" onAction="#addCarrinhoP3" prefHeight="29.0" prefWidth="91.0" text="Add Carrinho" />
-      <Button fx:id="baddCP4" layoutX="799.0" layoutY="168.0" mnemonicParsing="false" onAction="#addCarrinhoP4" prefHeight="29.0" prefWidth="91.0" text="Add Carrinho" />
-      <Button fx:id="baddCP5" layoutX="799.0" layoutY="364.0" mnemonicParsing="false" onAction="#addCarrinhoP5" prefHeight="29.0" prefWidth="91.0" text="Add Carrinho" />
-      <Button fx:id="baddCP6" layoutX="800.0" layoutY="564.0" mnemonicParsing="false" onAction="#addCarrinhoP6" prefHeight="29.0" prefWidth="91.0" text="Add Carrinho" />
+      <Button fx:id="baddCP1" layoutX="377.0" layoutY="176.0" mnemonicParsing="false" onAction="#addCarrinhoP1" prefHeight="29.0" prefWidth="91.0" text="Add Carrinho" />
+      <Button fx:id="baddCP2" layoutX="370.0" layoutY="371.0" mnemonicParsing="false" onAction="#addCarrinhoP2" prefHeight="29.0" prefWidth="91.0" text="Add Carrinho" />
+      <Button fx:id="baddCP3" layoutX="371.0" layoutY="571.0" mnemonicParsing="false" onAction="#addCarrinhoP3" prefHeight="29.0" prefWidth="91.0" text="Add Carrinho" />
+      <Button fx:id="baddCP4" layoutX="833.0" layoutY="176.0" mnemonicParsing="false" onAction="#addCarrinhoP4" prefHeight="29.0" prefWidth="91.0" text="Add Carrinho" />
+      <Button fx:id="baddCP5" layoutX="833.0" layoutY="372.0" mnemonicParsing="false" onAction="#addCarrinhoP5" prefHeight="29.0" prefWidth="91.0" text="Add Carrinho" />
+      <Button fx:id="baddCP6" layoutX="834.0" layoutY="572.0" mnemonicParsing="false" onAction="#addCarrinhoP6" prefHeight="29.0" prefWidth="91.0" text="Add Carrinho" />
    </children>
 </AnchorPane>

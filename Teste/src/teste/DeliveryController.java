@@ -16,6 +16,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.shape.Rectangle;
 
 /**
  * FXML Controller class
@@ -32,6 +33,8 @@ public class DeliveryController implements Initializable {
     private Label concluir;
     @FXML
     private Button nao;
+    @FXML
+    private Rectangle ret;
 
     /**
      * Initializes the controller class.
@@ -39,6 +42,7 @@ public class DeliveryController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
     }    
 
     @FXML
@@ -46,6 +50,9 @@ public class DeliveryController implements Initializable {
         Teste.trocaTela("menu");
         deliveryFild.setText("");
         pai.setOpacity(100);
+        concluir.setOpacity(100);      
+        nao.setOpacity(100);
+        ret.setOpacity(0);
     }
 
     @FXML
@@ -66,6 +73,7 @@ public class DeliveryController implements Initializable {
                        bairro = linha.split(";")[4];
                        cidade = linha.split(";")[5];
                        estado = linha.split(";")[6];
+                       ret.setOpacity(100);
                        deliveryFild.setText("Os produtos serão entregues para "+nome+" em:\nRua "+rua+" Casa "+casa+","+bairro+","+cidade+","+estado+".\nValor total: R$ "+valor );
                        pai.setOpacity(0);
                        concluir.setOpacity(0);
@@ -78,9 +86,12 @@ public class DeliveryController implements Initializable {
                 }
             }else{
                 System.out.println("foi n");
-                deliveryFild.setText("Realizae o ligin em uma conta para proceder.");
+                deliveryFild.setText("Realize o login em uma conta para proceder.");
                 System.out.println("erro");
+                concluir.setOpacity(0);
+                nao.setOpacity(0);
                 pai.setOpacity(0);
+                ret.setOpacity(100);
             }
         }else{
             System.out.println("jáfoi");

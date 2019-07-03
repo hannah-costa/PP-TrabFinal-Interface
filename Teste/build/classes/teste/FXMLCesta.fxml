@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teste.FXMLCestaController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teste.FXMLCestaController">
    <children>
       <Label layoutX="14.0" layoutY="64.0" prefHeight="53.0" prefWidth="301.0" text="Cesta de Compras" wrapText="true" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="585.0" AnchorPane.topAnchor="64.0">
          <font>
@@ -24,13 +24,13 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Line endX="751.0" layoutX="134.0" layoutY="120.0" startX="-118.0" stroke="#b5aeae" />
+      <Line endX="799.3333129882812" layoutX="134.0" layoutY="120.0" startX="-118.0" stroke="#b5aeae" />
       <Label layoutX="790.0" layoutY="90.0" text="Quantidade">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#175749" height="74.0" layoutY="-4.0" stroke="#143626" strokeType="INSIDE" width="901.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#175749" height="74.0" layoutY="-4.0" stroke="#143626" strokeType="INSIDE" width="952.0" />
       <VBox layoutX="16.0" layoutY="126.0" prefHeight="487.0" prefWidth="550.0" spacing="20.0">
          <children>
             <HBox prefHeight="146.0" prefWidth="757.0" spacing="20.0">
@@ -129,12 +129,12 @@
             </Label>
          </children>
       </VBox>
-      <Button layoutX="150.0" layoutY="11.0" mnemonicParsing="false" onAction="#aoMenuC" prefHeight="15.0" prefWidth="95.0" text="MENU" textFill="#5e5050">
+      <Button layoutX="150.0" layoutY="11.0" mnemonicParsing="false" onAction="#aoMenuC" prefHeight="15.0" prefWidth="95.0" style="-fx-background-radius: 100;" text="Menu" textFill="#5e5050">
          <font>
             <Font name="Akhbar MT" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="773.0" layoutY="25.0" mnemonicParsing="false" onAction="#realizarCompra" text="Realizar Compra">
+      <Button layoutX="773.0" layoutY="25.0" mnemonicParsing="false" onAction="#realizarCompra" style="-fx-background-radius: 100;" text="Realizar Compra">
          <effect>
             <Blend mode="GREEN" />
          </effect>
@@ -146,7 +146,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="347.0" layoutY="25.0" mnemonicParsing="false" onAction="#mostraItens" text="Atualizar Página" />
+      <Button layoutX="347.0" layoutY="21.0" mnemonicParsing="false" onAction="#mostraItens" style="-fx-background-radius: 100;" text="Atualizar Página" />
       <Label fx:id="totalPreco" contentDisplay="CENTER" layoutX="566.0" layoutY="574.0" prefHeight="53.0" prefWidth="166.0">
          <font>
             <Font name="System Bold" size="18.0" />

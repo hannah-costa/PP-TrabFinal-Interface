@@ -6,16 +6,10 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teste.DeliveryController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teste.DeliveryController">
    <children>
-      <Button fx:id="nao" layoutX="466.0" layoutY="254.0" mnemonicParsing="false" onAction="#voltar" text="Não" />
-      <Button fx:id="pai" layoutX="394.0" layoutY="254.0" mnemonicParsing="false" onAction="#show" text="Sim" />
-      <Label fx:id="deliveryFild" alignment="CENTER" layoutX="14.0" layoutY="278.0" prefHeight="238.0" prefWidth="873.0">
-         <font>
-            <Font name="Yu Gothic UI Regular" size="29.0" />
-         </font>
-      </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#175749" height="84.0" layoutX="-1.0" layoutY="-5.0" stroke="#143626" strokeType="INSIDE" width="901.0" />
+      <Rectangle fx:id="ret" arcHeight="5.0" arcWidth="5.0" fill="#175748c0" height="238.0" layoutX="43.0" layoutY="230.0" opacity="0.0" stroke="#0f390e" strokeType="INSIDE" width="873.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#175749" height="84.0" layoutX="-1.0" layoutY="-5.0" stroke="#143626" strokeType="INSIDE" width="954.0" />
       <Label layoutX="20.0" layoutY="3.0" prefHeight="60.0" prefWidth="113.0" text="tribal." textFill="#dde1dd">
          <font>
             <Font name="AR BONNIE" size="56.0" />
@@ -26,10 +20,17 @@
             <Font name="Arial" size="16.0" />
          </font>
       </Button>
-      <Label fx:id="concluir" layoutX="311.0" layoutY="200.0" text="Deseja concluir a compra?">
+      <Label fx:id="concluir" layoutX="339.0" layoutY="215.0" text="Deseja concluir a compra?">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
+      <Label fx:id="deliveryFild" alignment="CENTER" layoutX="41.0" layoutY="233.0" prefHeight="238.0" prefWidth="873.0" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic UI Regular" size="29.0" />
+         </font>
+      </Label>
+      <Button fx:id="nao" layoutX="494.0" layoutY="269.0" mnemonicParsing="false" onAction="#voltar" text="Não" />
+      <Button fx:id="pai" layoutX="422.0" layoutY="269.0" mnemonicParsing="false" onAction="#show" text="Sim" />
    </children>
 </AnchorPane>

@@ -117,6 +117,12 @@ public class FXMLPesquisaController implements Initializable {
     private Label autorProduto6;
     @FXML
     private Label nomeProduto6;
+    @FXML
+    private Button ant;
+    @FXML
+    private Button prox;
+    @FXML
+    private Label pag;
     
     @FXML
     protected void voltarParaMenu(ActionEvent event) {
