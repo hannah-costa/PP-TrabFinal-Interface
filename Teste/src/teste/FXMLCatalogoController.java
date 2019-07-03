@@ -96,6 +96,12 @@ public class FXMLCatalogoController implements Initializable {
     private Button baddCP5;
     @FXML
     private Button baddCP6;
+    @FXML
+    private Button ant;
+    @FXML
+    private Button prox;
+    @FXML
+    private Label pag;
     
     @FXML
     protected void voltarParaMenu(ActionEvent event) {
