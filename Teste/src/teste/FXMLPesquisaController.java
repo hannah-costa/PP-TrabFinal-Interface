@@ -117,12 +117,6 @@ public class FXMLPesquisaController implements Initializable {
     private Label autorProduto6;
     @FXML
     private Label nomeProduto6;
-    @FXML
-    private Button ant;
-    @FXML
-    private Button prox;
-    @FXML
-    private Label pag;
     
     @FXML
     protected void voltarParaMenu(ActionEvent event) {
@@ -230,10 +224,14 @@ public class FXMLPesquisaController implements Initializable {
         
                 editoraProduto1.setText(auxp.getEditora());
         
-                prp = new String();
-                prp = String.valueOf(auxp.getPreco());
-                precoProduto1.setText("R$ " + prp);
-                baddCP1.setOpacity(100);;
+                if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                    precoProduto1.setText("ESGOTADO");
+                }else{
+                    prp = new String();
+                    prp = String.format("%.2f", auxp.getPreco());
+                    precoProduto1.setText("R$ " + prp);
+                    baddCP1.setOpacity(100);
+                }
                 
             }else if(i == 1){
                 auxp = (Produto)aux.get(i);
@@ -260,10 +258,14 @@ public class FXMLPesquisaController implements Initializable {
         
                 editoraProduto2.setText(auxp.getEditora());
         
-                prp = new String();
-                prp = String.valueOf(auxp.getPreco());
-                precoProduto2.setText("R$ " + prp);             
-                baddCP2.setOpacity(100);;
+                if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                    precoProduto2.setText("ESGOTADO");
+                }else{
+                    prp = new String();
+                    prp = String.format("%.2f", auxp.getPreco());
+                    precoProduto2.setText("R$ " + prp);
+                    baddCP2.setOpacity(100);
+                }
                 
             }else if(i == 2){
                 auxp = (Produto)aux.get(i);
@@ -290,10 +292,15 @@ public class FXMLPesquisaController implements Initializable {
         
                 editoraProduto3.setText(auxp.getEditora());
         
-                prp = new String();
-                prp = String.valueOf(auxp.getPreco());
-                precoProduto3.setText("R$ " + prp); 
-                baddCP3.setOpacity(100);;
+                if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                    precoProduto3.setText("ESGOTADO");
+                }else{
+                    prp = new String();
+                    prp = String.format("%.2f", auxp.getPreco());
+                    precoProduto3.setText("R$ " + prp);
+                    baddCP3.setOpacity(100);
+                }
+
             }else if(i == 3){
                 auxp = (Produto)aux.get(i);
                 auxp.printProduto(auxp);
@@ -319,10 +326,15 @@ public class FXMLPesquisaController implements Initializable {
         
                 editoraProduto4.setText(auxp.getEditora());
         
-                prp = new String();
-                prp = String.valueOf(auxp.getPreco());
-                precoProduto4.setText("R$ " + prp); 
-                baddCP4.setOpacity(100);;
+                if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                    precoProduto4.setText("ESGOTADO");
+                }else{
+                    prp = new String();
+                    prp = String.format("%.2f", auxp.getPreco());
+                    precoProduto4.setText("R$ " + prp);
+                    baddCP4.setOpacity(100);
+                }
+
             }else if(i == 4){
                 auxp = (Produto)aux.get(i);
                 auxp.printProduto(auxp);
@@ -348,10 +360,15 @@ public class FXMLPesquisaController implements Initializable {
         
                 editoraProduto5.setText(auxp.getEditora());
         
-                prp = new String();
-                prp = String.valueOf(auxp.getPreco());
-                precoProduto5.setText("R$ " + prp); 
-                baddCP5.setOpacity(100);;
+                if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                    precoProduto5.setText("ESGOTADO");
+                }else{
+                    prp = new String();
+                    prp = String.format("%.2f", auxp.getPreco());
+                    precoProduto5.setText("R$ " + prp);
+                    baddCP5.setOpacity(100);
+                }
+
             }else if(i == 5){
                 auxp = (Produto)aux.get(i);
                 auxp.printProduto(auxp);
@@ -377,10 +394,14 @@ public class FXMLPesquisaController implements Initializable {
         
                 editoraProduto6.setText(auxp.getEditora());
         
-                prp = new String();
-                prp = String.valueOf(auxp.getPreco());
-                precoProduto6.setText("R$ " + prp); 
-                baddCP6.setOpacity(100);;
+                if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                    precoProduto6.setText("ESGOTADO");
+                }else{
+                    prp = new String();
+                    prp = String.format("%.2f", auxp.getPreco());
+                    precoProduto6.setText("R$ " + prp);
+                    baddCP6.setOpacity(100);
+                }
             }
             i++;
         } 
@@ -494,10 +515,14 @@ public class FXMLPesquisaController implements Initializable {
         
                 editoraProduto1.setText(auxp.getEditora());
         
-                prp = new String();
-                prp = String.valueOf(auxp.getPreco());
-                precoProduto1.setText("R$ " + prp);
-                baddCP1.setOpacity(100);;
+                if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                    precoProduto1.setText("ESGOTADO");
+                }else{
+                    prp = new String();
+                    prp = String.format("%.2f", auxp.getPreco());
+                    precoProduto1.setText("R$ " + prp);
+                    baddCP1.setOpacity(100);
+                }
                 
             }else if(i == 1){
                 auxp = (Produto)aux.get(i);
@@ -524,10 +549,14 @@ public class FXMLPesquisaController implements Initializable {
         
                 editoraProduto2.setText(auxp.getEditora());
         
-                prp = new String();
-                prp = String.valueOf(auxp.getPreco());
-                precoProduto2.setText("R$ " + prp);             
-                baddCP2.setOpacity(100);;
+                if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                    precoProduto2.setText("ESGOTADO");
+                }else{
+                    prp = new String();
+                    prp = String.format("%.2f", auxp.getPreco());
+                    precoProduto2.setText("R$ " + prp);
+                    baddCP2.setOpacity(100);
+                }
                 
             }else if(i == 2){
                 auxp = (Produto)aux.get(i);
@@ -554,10 +583,15 @@ public class FXMLPesquisaController implements Initializable {
         
                 editoraProduto3.setText(auxp.getEditora());
         
-                prp = new String();
-                prp = String.valueOf(auxp.getPreco());
-                precoProduto3.setText("R$ " + prp); 
-                baddCP3.setOpacity(100);;
+                if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                    precoProduto3.setText("ESGOTADO");
+                }else{
+                    prp = new String();
+                    prp = String.format("%.2f", auxp.getPreco());
+                    precoProduto3.setText("R$ " + prp);
+                    baddCP3.setOpacity(100);
+                }
+
             }else if(i == 3){
                 auxp = (Produto)aux.get(i);
                 auxp.printProduto(auxp);
@@ -583,10 +617,15 @@ public class FXMLPesquisaController implements Initializable {
         
                 editoraProduto4.setText(auxp.getEditora());
         
-                prp = new String();
-                prp = String.valueOf(auxp.getPreco());
-                precoProduto4.setText("R$ " + prp); 
-                baddCP4.setOpacity(100);;
+                if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                    precoProduto4.setText("ESGOTADO");
+                }else{
+                    prp = new String();
+                    prp = String.format("%.2f", auxp.getPreco());
+                    precoProduto4.setText("R$ " + prp);
+                    baddCP4.setOpacity(100);
+                }
+
             }else if(i == 4){
                 auxp = (Produto)aux.get(i);
                 auxp.printProduto(auxp);
@@ -612,10 +651,15 @@ public class FXMLPesquisaController implements Initializable {
         
                 editoraProduto5.setText(auxp.getEditora());
         
-                prp = new String();
-                prp = String.valueOf(auxp.getPreco());
-                precoProduto5.setText("R$ " + prp); 
-                baddCP5.setOpacity(100);;
+                if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                    precoProduto5.setText("ESGOTADO");
+                }else{
+                    prp = new String();
+                    prp = String.format("%.2f", auxp.getPreco());
+                    precoProduto5.setText("R$ " + prp);
+                    baddCP5.setOpacity(100);
+                }
+
             }else if(i == 5){
                 auxp = (Produto)aux.get(i);
                 auxp.printProduto(auxp);
@@ -641,10 +685,14 @@ public class FXMLPesquisaController implements Initializable {
         
                 editoraProduto6.setText(auxp.getEditora());
         
-                prp = new String();
-                prp = String.valueOf(auxp.getPreco());
-                precoProduto6.setText("R$ " + prp); 
-                baddCP6.setOpacity(100);;
+                if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                    precoProduto6.setText("ESGOTADO");
+                }else{
+                    prp = new String();
+                    prp = String.format("%.2f", auxp.getPreco());
+                    precoProduto6.setText("R$ " + prp);
+                    baddCP6.setOpacity(100);
+                }
             }
             i++;
         } 
@@ -729,10 +777,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto1.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto1.setText("R$ " + prp);
-                    baddCP1.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto1.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto1.setText("R$ " + prp);
+                        baddCP1.setOpacity(100);
+                    }
 
                 }else if(i == 1){
                     auxp = (Produto)aux.get(i);
@@ -759,10 +811,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto2.setText(auxp.getEditora());
 
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                    precoProduto2.setText("ESGOTADO");
+                }else{
                     prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto2.setText("R$ " + prp);             
-                    baddCP2.setOpacity(100);;
+                    prp = String.format("%.2f", auxp.getPreco());
+                    precoProduto2.setText("R$ " + prp);
+                    baddCP2.setOpacity(100);
+                }
 
                 }else if(i == 2){
                     auxp = (Produto)aux.get(i);
@@ -789,10 +845,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto3.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto3.setText("R$ " + prp); 
-                    baddCP3.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto3.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto3.setText("R$ " + prp);
+                        baddCP3.setOpacity(100);
+                    }
                 }else if(i == 3){
                     auxp = (Produto)aux.get(i);
                     auxp.printProduto(auxp);
@@ -818,10 +878,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto4.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto4.setText("R$ " + prp); 
-                    baddCP4.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto4.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto4.setText("R$ " + prp);
+                        baddCP4.setOpacity(100);
+                    }
                 }else if(i == 4){
                     auxp = (Produto)aux.get(i);
                     auxp.printProduto(auxp);
@@ -847,10 +911,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto5.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto5.setText("R$ " + prp); 
-                    baddCP5.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto5.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto5.setText("R$ " + prp);
+                        baddCP5.setOpacity(100);
+                    }
                 }else if(i == 5){
                     auxp = (Produto)aux.get(i);
                     auxp.printProduto(auxp);
@@ -876,10 +944,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto6.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto6.setText("R$ " + prp); 
-                    baddCP6.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto6.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto6.setText("R$ " + prp);
+                        baddCP6.setOpacity(100);
+                    }
                 }
                 i++;
             } 
@@ -958,10 +1030,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto1.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto1.setText("R$ " + prp);
-                    baddCP1.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto1.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto1.setText("R$ " + prp);
+                        baddCP1.setOpacity(100);
+                    }
 
                 }else if(i == 7){
                     auxp = (Produto)aux.get(i);
@@ -988,10 +1064,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto2.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto2.setText("R$ " + prp);             
-                    baddCP2.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto2.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto2.setText("R$ " + prp);
+                        baddCP2.setOpacity(100);
+                    }
 
                 }else if(i == 8){
                     auxp = (Produto)aux.get(i);
@@ -1018,10 +1098,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto3.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto3.setText("R$ " + prp); 
-                    baddCP3.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto3.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto3.setText("R$ " + prp);
+                        baddCP3.setOpacity(100);
+                    }
                 }else if(i == 9){
                     auxp = (Produto)aux.get(i);
                     auxp.printProduto(auxp);
@@ -1047,10 +1131,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto4.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto4.setText("R$ " + prp); 
-                    baddCP4.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto4.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto4.setText("R$ " + prp);
+                        baddCP4.setOpacity(100);
+                    }
                 }else if(i == 10){
                     auxp = (Produto)aux.get(i);
                     auxp.printProduto(auxp);
@@ -1076,10 +1164,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto5.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto5.setText("R$ " + prp); 
-                    baddCP5.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto5.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto5.setText("R$ " + prp);
+                        baddCP5.setOpacity(100);
+                    }
                 }else if(i == 11){
                     auxp = (Produto)aux.get(i);
                     auxp.printProduto(auxp);
@@ -1105,10 +1197,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto6.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto6.setText("R$ " + prp); 
-                    baddCP6.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto6.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto6.setText("R$ " + prp);
+                        baddCP6.setOpacity(100);
+                    }
                 }
                 i++;
             } 
@@ -1187,10 +1283,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto1.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto1.setText("R$ " + prp);
-                    baddCP1.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto1.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto1.setText("R$ " + prp);
+                        baddCP1.setOpacity(100);
+                    }
 
                 }else if(i == 13){
                     auxp = (Produto)aux.get(i);
@@ -1217,10 +1317,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto2.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto2.setText("R$ " + prp);             
-                    baddCP2.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto2.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto2.setText("R$ " + prp);
+                        baddCP2.setOpacity(100);
+                    }
 
                 }else if(i == 14){
                     auxp = (Produto)aux.get(i);
@@ -1247,10 +1351,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto3.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto3.setText("R$ " + prp); 
-                    baddCP3.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto3.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto3.setText("R$ " + prp);
+                        baddCP3.setOpacity(100);
+                    }
                 }else if(i == 15){
                     auxp = (Produto)aux.get(i);
                     auxp.printProduto(auxp);
@@ -1276,10 +1384,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto4.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto4.setText("R$ " + prp); 
-                    baddCP4.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto4.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto4.setText("R$ " + prp);
+                        baddCP4.setOpacity(100);
+                    }
                 }else if(i == 16){
                     auxp = (Produto)aux.get(i);
                     auxp.printProduto(auxp);
@@ -1305,10 +1417,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto5.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto5.setText("R$ " + prp); 
-                    baddCP5.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto5.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto5.setText("R$ " + prp);
+                        baddCP5.setOpacity(100);
+                    }
                 }else if(i == 17){
                     auxp = (Produto)aux.get(i);
                     auxp.printProduto(auxp);
@@ -1334,10 +1450,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto6.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto6.setText("R$ " + prp); 
-                    baddCP6.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto6.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto6.setText("R$ " + prp);
+                        baddCP6.setOpacity(100);
+                    }
                 }
                 i++;
             } 
@@ -1416,10 +1536,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto1.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto1.setText("R$ " + prp);
-                    baddCP1.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto1.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto1.setText("R$ " + prp);
+                        baddCP1.setOpacity(100);
+                    }
 
                 }else if(i == 19){
                     auxp = (Produto)aux.get(i);
@@ -1446,10 +1570,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto2.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto2.setText("R$ " + prp);             
-                    baddCP2.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto2.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto2.setText("R$ " + prp);
+                        baddCP2.setOpacity(100);
+                    }
 
                 }else if(i == 20){
                     auxp = (Produto)aux.get(i);
@@ -1476,10 +1604,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto3.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto3.setText("R$ " + prp); 
-                    baddCP3.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto3.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto3.setText("R$ " + prp);
+                        baddCP3.setOpacity(100);
+                    }
                 }else if(i == 21){
                     auxp = (Produto)aux.get(i);
                     auxp.printProduto(auxp);
@@ -1505,10 +1637,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto4.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto4.setText("R$ " + prp); 
-                    baddCP4.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto4.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto4.setText("R$ " + prp);
+                        baddCP4.setOpacity(100);
+                    }
                 }else if(i == 22){
                     auxp = (Produto)aux.get(i);
                     auxp.printProduto(auxp);
@@ -1534,10 +1670,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto5.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto5.setText("R$ " + prp); 
-                    baddCP5.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto5.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto5.setText("R$ " + prp);
+                        baddCP5.setOpacity(100);
+                    }
                 }else if(i == 23){
                     auxp = (Produto)aux.get(i);
                     auxp.printProduto(auxp);
@@ -1563,10 +1703,14 @@ public class FXMLPesquisaController implements Initializable {
 
                     editoraProduto6.setText(auxp.getEditora());
 
-                    prp = new String();
-                    prp = String.valueOf(auxp.getPreco());
-                    precoProduto6.setText("R$ " + prp); 
-                    baddCP6.setOpacity(100);;
+                    if(FXMLCatalogoController.mds.get(i).getQuant() == 0){
+                        precoProduto6.setText("ESGOTADO");
+                    }else{
+                        prp = new String();
+                        prp = String.format("%.2f", auxp.getPreco());
+                        precoProduto6.setText("R$ " + prp);
+                        baddCP6.setOpacity(100);
+                    }
                 }
                 i++;
             } 
@@ -1628,28 +1772,44 @@ public class FXMLPesquisaController implements Initializable {
         if(pgn == 1){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(0).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(0).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(0).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
         }else if(pgn == 2){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(6).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(6).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(6).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
         }else if(pgn == 3){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(12).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(12).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(12).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
         }else if(pgn == 4){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(18).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(18).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(18).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
@@ -1661,26 +1821,42 @@ public class FXMLPesquisaController implements Initializable {
         if(pgn == 1){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(1).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(1).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(1).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
         }else if(pgn == 2){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(7).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(7).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(7).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }
         }else if(pgn == 3){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(13).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(13).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(13).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
         }else if(pgn == 4){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(19).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(19).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(19).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
@@ -1692,28 +1868,44 @@ public class FXMLPesquisaController implements Initializable {
         if(pgn == 1){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(2).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(2).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(2).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
         }else if(pgn == 2){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(8).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(8).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(8).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
         }else if(pgn == 3){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(14).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(14).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(14).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
         }else if(pgn == 4){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(20).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(20).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(20).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
@@ -1725,28 +1917,44 @@ public class FXMLPesquisaController implements Initializable {
         if(pgn == 1){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(3).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(3).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(3).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
         }else if(pgn == 2){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(9).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(9).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(9).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
         }else if(pgn == 3){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(15).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(15).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(15).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
         }else if(pgn == 4){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(21).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(21).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(21).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
@@ -1758,28 +1966,44 @@ public class FXMLPesquisaController implements Initializable {
         if(pgn == 1){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(4).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(4).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(4).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
         }else if(pgn == 2){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(10).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(10).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(10).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
         }else if(pgn == 3){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(16).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(16).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(16).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
         }else if(pgn == 4){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(22).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(22).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(22).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
@@ -1791,28 +2015,44 @@ public class FXMLPesquisaController implements Initializable {
         if(pgn == 1){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(5).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(5).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(5).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
         }else if(pgn == 2){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(11).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(11).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(11).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
         }else if(pgn == 3){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(17).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(17).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(17).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }
         }else if(pgn == 4){
             if(baddCP1.getOpacity() != 0){
                 System.out.println("Clicou");
-                Teste.addCarrinho(aux.get(23).getId());
+                if(FXMLCatalogoController.mds.pegarID(aux.get(23).getId()).getQuant() > 0){
+                    Teste.addCarrinho(aux.get(23).getId());
+                }else{
+                    System.out.println("NAO ADD NA CESTA");
+                }
             }else{
                 System.out.println("Clicou");
             }

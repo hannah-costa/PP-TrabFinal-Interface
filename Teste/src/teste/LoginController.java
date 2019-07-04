@@ -16,14 +16,13 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashSet;
 import javafx.scene.control.PasswordField;
 
 
 /**
  * FXML Controller class
  *
- * @author luisn
+ * @author Hannah Moreira Costa, Luis Henrique da Mota Freitas, Paulo Gabriel Borralho Gomes
  */
 public class LoginController implements Initializable {
 
@@ -34,7 +33,7 @@ public class LoginController implements Initializable {
     @FXML
     private Label msg;
     
-    private int ja=0;
+    private boolean ja = false;
    
 
     /**
@@ -49,12 +48,12 @@ public class LoginController implements Initializable {
          nameFild.setText("");
          senhaFild.setText("");
          msg.setText("");
-         ja=0;
+         ja = false;
     }
 
     @FXML
     protected void Entrar(ActionEvent event) throws FileNotFoundException, IOException {
-        if(ja==0){
+        if(ja == false){
             String senha = senhaFild.getText();
             String name = nameFild.getText();
             FileReader arq = new FileReader("users.txt");
@@ -67,7 +66,7 @@ public class LoginController implements Initializable {
                     msg.setText("Login realizado com sucesso.");
                     Teste.youIn(cnome,csenha);
                     System.out.println("loguei");
-                    ja=1;
+                    ja = true;
                     break;
                 }else{
                   linha =lerArq.readLine();

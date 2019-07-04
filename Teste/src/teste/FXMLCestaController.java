@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package teste;
 
 import java.net.URL;
@@ -90,7 +85,6 @@ public class FXMLCestaController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {     
-        // CU--
         qtd1.setOpacity(0);
         ok1.setOpacity(0);
         remove1.setOpacity(0);
@@ -130,6 +124,10 @@ public class FXMLCestaController implements Initializable {
     
     @FXML
     protected void realizarCompra(ActionEvent event) {
+        mostraItens(event);
+        for(int i=0; i<cesta.size(); i++){
+            FXMLCatalogoController.mds.retirarEstoque(cesta.get(i).getId(), cesta.get(i).getQtdPedida());
+        }
         Teste.valorTotalComprado = cesta.calcTotal();
         cesta = new CestaCompras();
         mostraItens(event);
@@ -139,7 +137,6 @@ public class FXMLCestaController implements Initializable {
     protected void valorTotalDaCompra(){
         String pt;
         pt = new String();
-        //pt = String.valueOf(cesta.calcTotal());
         pt = String.format("%.2f",cesta.calcTotal());
         totalPreco.setText("Total: R$ " + pt);
     }
@@ -993,70 +990,121 @@ public class FXMLCestaController implements Initializable {
         }
     }
     
-    @FXML
-    protected void mudarQunat1(ActionEvent event){
+   @FXML
+    protected void mudarQunat1(ActionEvent event){      
         if(pgn == 1){
-            cesta.get(0).setQtdPedida(Integer.parseInt(qtd1.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(0).getId(), Integer.parseInt(qtd1.getText()))){
+                cesta.get(0).setQtdPedida(Integer.parseInt(qtd1.getText()));
+            }
         }else if(pgn == 2){
-            cesta.get(3).setQtdPedida(Integer.parseInt(qtd1.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(3).getId(), Integer.parseInt(qtd1.getText()))){
+                cesta.get(3).setQtdPedida(Integer.parseInt(qtd1.getText()));
+            }           
         }else if(pgn == 3){
-            cesta.get(6).setQtdPedida(Integer.parseInt(qtd1.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(6).getId(), Integer.parseInt(qtd1.getText()))){
+                cesta.get(6).setQtdPedida(Integer.parseInt(qtd1.getText()));
+            } 
         }else if(pgn == 4){
-            cesta.get(9).setQtdPedida(Integer.parseInt(qtd1.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(9).getId(), Integer.parseInt(qtd1.getText()))){
+                cesta.get(9).setQtdPedida(Integer.parseInt(qtd1.getText()));
+            } 
         }else if(pgn == 5){
-            cesta.get(12).setQtdPedida(Integer.parseInt(qtd1.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(12).getId(), Integer.parseInt(qtd1.getText()))){
+                cesta.get(12).setQtdPedida(Integer.parseInt(qtd1.getText()));
+            } 
         }else if(pgn == 6){
-            cesta.get(15).setQtdPedida(Integer.parseInt(qtd1.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(15).getId(), Integer.parseInt(qtd1.getText()))){
+                cesta.get(15).setQtdPedida(Integer.parseInt(qtd1.getText()));
+            } 
         }else if(pgn == 7){
-            cesta.get(18).setQtdPedida(Integer.parseInt(qtd1.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(18).getId(), Integer.parseInt(qtd1.getText()))){
+                cesta.get(18).setQtdPedida(Integer.parseInt(qtd1.getText()));
+            } 
         }else if(pgn == 8){
-            cesta.get(21).setQtdPedida(Integer.parseInt(qtd1.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(21).getId(), Integer.parseInt(qtd1.getText()))){
+                cesta.get(21).setQtdPedida(Integer.parseInt(qtd1.getText()));
+            } 
         }
         valorTotalDaCompra();
+        mostraItens(event);
     }
     
     @FXML
     protected void mudarQunat2(ActionEvent event){
         if(pgn == 1){
-            cesta.get(1).setQtdPedida(Integer.parseInt(qtd2.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(1).getId(), Integer.parseInt(qtd2.getText()))){
+                cesta.get(1).setQtdPedida(Integer.parseInt(qtd2.getText()));
+            }
         }else if(pgn == 2){
-            cesta.get(4).setQtdPedida(Integer.parseInt(qtd2.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(4).getId(), Integer.parseInt(qtd2.getText()))){
+                cesta.get(4).setQtdPedida(Integer.parseInt(qtd2.getText()));
+            }
         }else if(pgn == 3){
-            cesta.get(7).setQtdPedida(Integer.parseInt(qtd2.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(7).getId(), Integer.parseInt(qtd2.getText()))){
+                cesta.get(7).setQtdPedida(Integer.parseInt(qtd2.getText()));
+            }
         }else if(pgn == 4){
-            cesta.get(10).setQtdPedida(Integer.parseInt(qtd2.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(10).getId(), Integer.parseInt(qtd2.getText()))){
+                cesta.get(10).setQtdPedida(Integer.parseInt(qtd2.getText()));
+            }
         }else if(pgn == 5){
-            cesta.get(13).setQtdPedida(Integer.parseInt(qtd2.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(13).getId(), Integer.parseInt(qtd2.getText()))){
+                cesta.get(13).setQtdPedida(Integer.parseInt(qtd2.getText()));
+            }
         }else if(pgn == 6){
-            cesta.get(16).setQtdPedida(Integer.parseInt(qtd2.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(16).getId(), Integer.parseInt(qtd2.getText()))){
+                cesta.get(16).setQtdPedida(Integer.parseInt(qtd2.getText()));
+            }
         }else if(pgn == 7){
-            cesta.get(19).setQtdPedida(Integer.parseInt(qtd2.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(19).getId(), Integer.parseInt(qtd2.getText()))){
+                cesta.get(19).setQtdPedida(Integer.parseInt(qtd2.getText()));
+            }
         }else if(pgn == 8){
-            cesta.get(22).setQtdPedida(Integer.parseInt(qtd2.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(22).getId(), Integer.parseInt(qtd2.getText()))){
+                cesta.get(22).setQtdPedida(Integer.parseInt(qtd2.getText()));
+            }
         }
         valorTotalDaCompra();
+        mostraItens(event);
     }
     
     @FXML
     protected void mudarQunat3(ActionEvent event){
         if(pgn == 1){
-            cesta.get(2).setQtdPedida(Integer.parseInt(qtd3.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(2).getId(), Integer.parseInt(qtd3.getText()))){
+                cesta.get(2).setQtdPedida(Integer.parseInt(qtd3.getText()));
+            }
         }else if(pgn == 2){
-            cesta.get(5).setQtdPedida(Integer.parseInt(qtd3.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(5).getId(), Integer.parseInt(qtd3.getText()))){
+                cesta.get(5).setQtdPedida(Integer.parseInt(qtd3.getText()));
+            }
         }else if(pgn == 3){
-            cesta.get(8).setQtdPedida(Integer.parseInt(qtd3.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(8).getId(), Integer.parseInt(qtd3.getText()))){
+                cesta.get(8).setQtdPedida(Integer.parseInt(qtd3.getText()));
+            }
         }else if(pgn == 4){
-            cesta.get(11).setQtdPedida(Integer.parseInt(qtd3.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(11).getId(), Integer.parseInt(qtd3.getText()))){
+                cesta.get(11).setQtdPedida(Integer.parseInt(qtd3.getText()));
+            }
         }else if(pgn == 5){
-            cesta.get(14).setQtdPedida(Integer.parseInt(qtd3.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(14).getId(), Integer.parseInt(qtd3.getText()))){
+                cesta.get(14).setQtdPedida(Integer.parseInt(qtd3.getText()));
+            }
         }else if(pgn == 6){
-            cesta.get(17).setQtdPedida(Integer.parseInt(qtd3.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(17).getId(), Integer.parseInt(qtd3.getText()))){
+                cesta.get(17).setQtdPedida(Integer.parseInt(qtd3.getText()));
+            }
         }else if(pgn == 7){
-            cesta.get(20).setQtdPedida(Integer.parseInt(qtd3.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(20).getId(), Integer.parseInt(qtd3.getText()))){
+                cesta.get(20).setQtdPedida(Integer.parseInt(qtd3.getText()));
+            }
         }else if(pgn == 8){
-            cesta.get(23).setQtdPedida(Integer.parseInt(qtd3.getText()));
+            if(FXMLCatalogoController.mds.verficarEstoque(cesta.get(23).getId(), Integer.parseInt(qtd3.getText()))){
+                cesta.get(23).setQtdPedida(Integer.parseInt(qtd3.getText()));
+            }
         }
         valorTotalDaCompra();
+        mostraItens(event);
     }
     
      @FXML

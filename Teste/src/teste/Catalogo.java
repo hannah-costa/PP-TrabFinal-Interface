@@ -329,4 +329,32 @@ public class Catalogo {
         return aux;
     }
     
+    protected boolean verficarEstoque(int id, int quant){
+        for(int i=0; i<ctlg.size(); i++){
+            if(id == ctlg.get(i).getId()){
+                if(quant <= ctlg.get(i).getQuant()){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    
+    protected void retirarEstoque(int id, int quant){
+        for(int i=0; i<ctlg.size(); i++){
+            if(id == ctlg.get(i).getId()){
+                ctlg.get(i).setQuantidade(quant);
+            }
+        }
+    }
+    
+    protected Produto pegarID(int id){
+        for(int i=0; i<ctlg.size(); i++){
+            if(id == ctlg.get(i).getId()){
+                return ctlg.get(i);
+            }
+        }
+        return null;
+    }
+    
 }

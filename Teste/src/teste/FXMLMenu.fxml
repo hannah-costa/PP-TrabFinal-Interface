@@ -65,17 +65,17 @@
             </Text>
          </children>
       </HBox>
-      <ImageView fx:id="gen1" fitHeight="100.0" fitWidth="72.0" layoutX="86.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="gen1" fitHeight="100.0" fitWidth="72.0" layoutX="69.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../produto6.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="gen2" fitHeight="100.0" fitWidth="70.0" layoutX="200.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="gen2" fitHeight="100.0" fitWidth="70.0" layoutX="183.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../produto11.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="gen3" fitHeight="117.0" fitWidth="75.0" layoutX="148.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="gen3" fitHeight="117.0" fitWidth="75.0" layoutX="131.0" layoutY="489.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../produto9.jpg" />
          </image>

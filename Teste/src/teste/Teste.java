@@ -5,7 +5,6 @@
  */
 package teste;
 
-import java.io.FileNotFoundException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -111,7 +110,7 @@ public class Teste extends Application {
             System.out.println("Adicionado: " +id);
         }
         
-        System.out.println("TAMANHO DESSA POHA: " + FXMLCestaController.cesta.size());
+        System.out.println("TAMANHO DA CESTA: " + FXMLCestaController.cesta.size());
     }
     
      ///////////////////////
